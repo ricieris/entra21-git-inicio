@@ -33,6 +33,7 @@ public class Exercicio08 {
         salariofinal = comissao + salariofixo;
 
         //Saída
-        System.out.println("O salário final é: "+salariofinal);
+        System.out.printf("O salário final é: R$%.2f",
+                salariofinal);
     }
 }

@@ -26,6 +26,6 @@ public class Exercicio07 {
         custofinal = (custofabrica + aumentodistribuidor + aumentoimposto);
 
         //Saída
-        System.out.println("O custo final do automóvel para o consumidor é: "+custofinal);
+        System.out.printf("O custo final do automóvel para o consumidor é: R$%.2f", custofinal);
     }
 }
