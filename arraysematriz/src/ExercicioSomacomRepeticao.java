@@ -17,9 +17,3 @@ public class ExercicioSomacomRepeticao {
         System.out.print("A soma é: "+soma);
     }
 }
-//Correção
-int soma2 = 0;
-for (int i2 = 0; i2 <5; i2++){
-        System.out.print("Digite um valor a ser somado: ");
-        soma2 += scan.nextInt();
-        System.out.print("A soma é: "+soma);
