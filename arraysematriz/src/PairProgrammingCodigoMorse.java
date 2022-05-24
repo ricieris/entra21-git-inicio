@@ -14,23 +14,18 @@ public class PairProgrammingCodigoMorse {
         funcao = scan.nextInt();*/
 
         String codigoMorse;
-        String[] morseQuebrado = new String[100];
         System.out.println("VOCÊ ESCOLHEU DECODIFICAR");
-        System.out.print("Digite o código morse separando as letras com '=' e os espaços com '*': ");
+        System.out.print("Digite o código morse separando as letras com '|' e os espaços com '*': ");
         codigoMorse = scan.nextLine();
-        morseQuebrado = codigoMorse.split("=");
+        String morseDecifrado = codigoMorse;
+
         //Até acima está certo
 
+        morseDecifrado = codigoMorse.replace(".-|", "a").replace("-...|", "b").replace("-.-.", "c").replace("-..", "d").replace(".", "e").replace("..-.", "f").replace("--.","g").replace( "....", "h").replace("..","i").replace(".---", "j").replace("-.-", "k").replace(".-..", "l").replace("--", "m").replace("-.", "n").replace("---","o").replace(".--.", "p").replace( "--.-", "q").replace(".-.", "r").replace("...", "s").replace("-","t").replace("..-", "u").replace("...-","v").replace(".--","w").replace("-..-","x").replace("-.--","y").replace("--..", "z");
 
-        String frase;
-        for (int i = 0; i < morseQuebrado.length; i++) {
-            String caractereDecodificado = morseQuebrado[i];
-            if (caractereDecodificado.equals(".-")) {
-                caractereDecodificado = "a";
 
-            }
-            System.out.println("É: " + caractereDecodificado);
-        }
+
+        System.out.println("É: " + morseDecifrado);
     }
 }
 
