@@ -1,5 +1,5 @@
 package classes;
-//("=====X-SALADA=====");
+
 public class XSalada extends XBurger {
     public XSalada() {
 
@@ -7,6 +7,8 @@ public class XSalada extends XBurger {
         this.adicionarIngrediente("Tomate");
         this.adicionarIngrediente("Picles");
         this.adicionarIngrediente("Maionese");
+
+        this.tipo = "X-SALADA";
     }
 }
 
