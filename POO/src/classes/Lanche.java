@@ -21,7 +21,7 @@ public abstract class Lanche {
         System.out.println();
         System.out.println("=INGREDIENTES=");
         for (String ingrediente: this.ingredientes) {
-            if ( ingrediente != null) {
+            if (ingrediente != null) {
                 System.out.println(ingrediente);
             }
         }

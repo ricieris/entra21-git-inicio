@@ -1,6 +1,6 @@
 package classes;
 
-public class XBurger extends Lanche {
+public class XBurger extends Sanduiche {
 
     public boolean aberto;
 
