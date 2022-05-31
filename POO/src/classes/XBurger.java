@@ -2,7 +2,7 @@ package classes;
 
 public class XBurger extends Sanduiche {
 
-    public boolean aberto;
+    private boolean aberto;
 
     public XBurger() {
 
@@ -11,16 +11,25 @@ public class XBurger extends Sanduiche {
         this.adicionarIngrediente("Presunto");
         this.adicionarIngrediente("Pão");
 
-        this.tipo = "X-BURGER";
+        this.setTipo("X-BURGUER");
 
     }
 
     @Override
     public void montarComanda() {
         super.montarComanda();
-        if (this.aberto) {
+        if (this.isAberto()) {
             System.out.println("------LANCHE ABERTO");
             System.out.println("=======================");
         }
     }
+
+    public void setAberto(boolean aberto) {
+        this.aberto = aberto;
+    }
+
+    public boolean isAberto() {
+        return this.aberto;
+    }
 }
+

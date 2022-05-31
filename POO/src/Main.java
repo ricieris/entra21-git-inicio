@@ -11,13 +11,15 @@ public class Main {
         System.out.println("(2) X-Burger");
         System.out.println("(3) X-Misto Quente");
         System.out.println("(4) Hot Dog");
-        System.out.println("(5) Mini Pizza (Só Calabresa)");
+        System.out.println("(5) Mini Pizza");
+        System.out.println("(6) Pizza");
         System.out.println();
         System.out.print("Digite sua opção: ");
         int escolha = scan.nextInt();
         scan.nextLine(); //sempre será utilizado
         Lanche lanche = null;
 
+        //Escolha do usuário e criação de qual lanche será
         switch (escolha) {
             case 1:
                 lanche = new XSalada();
@@ -38,10 +40,13 @@ public class Main {
             case 5:
                 lanche = new MiniPizza();
                 break;
-
+            case 6:
+                lanche = new Pizza();
+                break;
             default:
                 System.err.println("Escolha uma opção válida!");
         }
+
         if (lanche instanceof Sanduiche) {
             //adicionais
             System.out.print("Informe se o lanche terá adicionais (S = Sim / N = Não): ");
@@ -62,20 +67,62 @@ public class Main {
             if (lanche instanceof XBurger) {
                 System.out.print("Informe se o lanche será aberto (S = Sim / N = Não): ");
                 String aberto = scan.nextLine();
-                ((XBurger) lanche).aberto = aberto.equalsIgnoreCase("S");
+                ((XBurger) lanche).setAberto(aberto.equalsIgnoreCase("S"));
             }
         } else {
-            System.out.print("Informe se a mini pizza terá borda recheada (S = Sim / N = Não): ");
-            String bordaRecheada = scan.nextLine();
+            System.out.println("Informe o sabor da pizza: ");
+            System.out.println("(1) 4 Queijos");
+            System.out.println("(2) Calabresa");
+            System.out.println("(3) Frango com catupiry");
+            System.out.println("(4) Marguerita");
+            System.out.println("(5) Portuguesa");
+            int sabor = scan.nextInt();
+            scan.nextLine();
             MiniPizza miniPizza = ((MiniPizza) lanche);
-            miniPizza.bordaRecheada = bordaRecheada.equalsIgnoreCase("S");
+            switch (sabor) {
+                case 1:
+                    miniPizza.adicionarSaborEIngredientes("4 Queijos");
+                    break;
+
+                case 2:
+                    miniPizza.adicionarSaborEIngredientes("Calabresa");
+                    break;
+
+                case 3:
+                    miniPizza.adicionarSaborEIngredientes("Frango com catupiry");
+                    break;
+
+                case 4:
+                    miniPizza.adicionarSaborEIngredientes("Marguerita");
+                    break;
+
+                case 5:
+                    miniPizza.adicionarSaborEIngredientes("Portuguesa");
+                    break;
+                default:
+                    System.err.println("Escolha um sabor válido");
+            }
+
+            if (lanche instanceof Pizza) {
+                System.out.println("Informe o tamanho da pizza");
+                System.out.println("(XS) Broto");
+                System.out.println("(SM) Pequena");
+                System.out.println("(MD) Média");
+                System.out.println("(LG) Grande");
+                System.out.println("(XL) Família");
+                ((Pizza) lanche).setTamanho(scan.nextLine().toUpperCase());
+            }
+
+            System.out.print("Informe se terá borda recheada (S = Sim / N = Não): ");
+            String bordaRecheada = scan.nextLine();
+            miniPizza.setBordaRecheada(bordaRecheada.equalsIgnoreCase("S"));
             if (bordaRecheada.equalsIgnoreCase("S")){
                 System.out.print("Digite o sabor da borda recheada: ");
-                miniPizza.bordaSabor = scan.nextLine();
+                miniPizza.setBordaSabor(scan.nextLine());
             }
         }
-        System.out.print("Informe o valor do(a) " + lanche.tipo + ": R$");
-        lanche.valor = scan.nextDouble();
+        System.out.print("Informe o valor do(a) " + lanche.getTipo() + ": R$");
+        lanche.setValor(scan.nextDouble());
         lanche.montarComanda();
     }
 }
