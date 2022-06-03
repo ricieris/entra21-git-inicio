@@ -15,26 +15,16 @@ public abstract class Lanche {
         }
     }
 
-    public void montarComanda() {
-        if (this instanceof MiniPizza) {
-            System.out.println();
-            System.out.println("=====" + this.getTipo() + " = " + ((MiniPizza) this).getSabor() + "=====");
-        } else {
-            System.out.println();
-            System.out.println("=====" + this.getTipo() + "=====");
-        }
-        System.out.printf("VALOR: R$%.2f\n", this.getValor());
-        System.out.println();
-        System.out.println("=INGREDIENTES=");
-        for (String ingrediente : this.ingredientes) {
-            if (ingrediente != null) {
-                System.out.println(ingrediente);
-            }
-        }
-        System.out.println("=======================");
-    }
 
     //Getters & Setters
+    public String[] getIngredientes() {
+        return ingredientes;
+    }
+
+    public void setIngredientes(String[] ingredientes) {
+        this.ingredientes = ingredientes;
+    }
+
     public void setValor(double valor) {
         this.valor = valor;
     }

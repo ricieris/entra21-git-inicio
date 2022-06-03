@@ -15,19 +15,11 @@ public class XBurger extends Sanduiche {
 
     }
 
-    @Override
-    public void montarComanda() {
-        super.montarComanda();
-        if (this.isAberto()) {
-            System.out.println("------LANCHE ABERTO");
-            System.out.println("=======================");
-        }
-    }
 
+    //Getters & Setters
     public void setAberto(boolean aberto) {
         this.aberto = aberto;
     }
-
     public boolean isAberto() {
         return this.aberto;
     }

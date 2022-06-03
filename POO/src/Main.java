@@ -4,11 +4,12 @@ import java.util.Scanner;
 
 public class Main {
     public static Scanner scan = new Scanner(System.in);
+
     public static void main(String[] args) {
         montarLanche();
-
     }
-    private static void montarLanche(){
+
+    private static void montarLanche() {
         System.out.println("=MENU:=");
         System.out.println("(1) X-Salada");
         System.out.println("(2) X-Burger");
@@ -19,10 +20,10 @@ public class Main {
         System.out.println();
         System.out.print("Digite sua opção: ");
         int escolha = scan.nextInt();
-        scan.nextLine(); //sempre será utilizado
+        scan.nextLine(); //sempre será utilizado ao ler a escolha
         Lanche lanche = null;
 
-        //Escolha do usuário e criação de qual lanche será
+        //Escolha do usuário e criação de qual tipo de lanche será
         switch (escolha) {
             case 1:
                 lanche = new XSalada();
@@ -50,14 +51,15 @@ public class Main {
                 System.err.println("Escolha uma opção válida!");
         }
 
+        //Se o lanche escolhido for algum relacionado ao Sanduíche ele poderá ter adicionais, então fará o seguinte
         if (lanche instanceof Sanduiche) {
-            //adicionais
+            //informando se terá adicionais
             System.out.print("Informe se o lanche terá adicionais (S = Sim / N = Não): ");
             String adicionais = scan.nextLine();
             if (adicionais.equalsIgnoreCase("S")) {
-                //adicionar os adicionais
+                //adicionando os adicionais (limitado a 10)
                 for (int i = 0; i < 10; i++) {
-                    //pedir os adicionais
+                    //pedir os adicionais para o usuário
                     System.out.print("Informe o adicional: ");
                     ((Sanduiche) lanche).adicionarAdicional(scan.nextLine());
                     System.out.print("Deseja adicionar mais algum adicional? (S = Sim / N = Não): ");
@@ -119,13 +121,12 @@ public class Main {
             System.out.print("Informe se terá borda recheada (S = Sim / N = Não): ");
             String bordaRecheada = scan.nextLine();
             miniPizza.setBordaRecheada(bordaRecheada.equalsIgnoreCase("S"));
-            if (bordaRecheada.equalsIgnoreCase("S")){
+            if (bordaRecheada.equalsIgnoreCase("S")) {
                 System.out.print("Digite o sabor da borda recheada: ");
                 miniPizza.setBordaSabor(scan.nextLine());
             }
         }
         System.out.print("Informe o valor do(a) " + lanche.getTipo() + ": R$");
         lanche.setValor(scan.nextDouble());
-        lanche.montarComanda();
     }
 }

@@ -10,16 +10,20 @@ public class Cliente {
         this.setPedido(new Pedido());
     }
 
+
     //Getters & Setters
     public String getNome() {
         return nome;
     }
+
     public void setNome(String nome) {
         this.nome = nome;
     }
+
     public Pedido getPedido() {
         return pedido;
     }
+
     public void setPedido(Pedido pedido) {
         this.pedido = pedido;
     }
