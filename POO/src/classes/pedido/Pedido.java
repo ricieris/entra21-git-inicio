@@ -11,7 +11,7 @@ public class Pedido {
         for (Lanche l : this.getLanches()) {
             if (l != null) {
                 if (l instanceof MiniPizza) {
-                    MiniPizza mp = ((MiniPizza) l);
+                    MiniPizza mp = ((MiniPizza) l); // aqui é criado uma variável conventendo o lanche inteiro em Mini Pizza, pra ficar mais legível.
                     System.out.println();
                     System.out.println("=====" + mp.getTipo() + " = " + mp.getSabor() + "=====");
                     if (mp.isBordaRecheada()) {
