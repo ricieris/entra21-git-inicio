@@ -3,7 +3,6 @@ package classes.lanches;
 public abstract class Lanche {
     private String[] ingredientes = new String[10];
     private double valor;
-
     private String tipo;
 
     public void adicionarIngrediente(String ingrediente) {
