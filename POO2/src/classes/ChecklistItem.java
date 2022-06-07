@@ -11,7 +11,6 @@ public class ChecklistItem {
     private boolean completaCheck;
 
 
-
     public ChecklistItem() {
         this.setUuidCheck(UUID.randomUUID().toString());
     }

@@ -90,6 +90,7 @@ public class Tarefa {
     public ChecklistItem[] getChecklist() {
         return checklist;
     }
+
     public void setChecklist(ChecklistItem[] checklist) {
         this.checklist = checklist;
     }
