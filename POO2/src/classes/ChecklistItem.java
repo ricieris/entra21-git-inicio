@@ -9,7 +9,7 @@ public class ChecklistItem {
     private String nomeCheck;
     private String descricaoCheck;
     private boolean completaCheck;
-    private int ordemCheck;
+
 
 
     public ChecklistItem() {
@@ -55,11 +55,4 @@ public class ChecklistItem {
         this.completaCheck = completaCheck;
     }
 
-    public int getOrdemCheck() {
-        return ordemCheck;
-    }
-
-    public void setOrdemCheck(int ordemCheck) {
-        this.ordemCheck = ordemCheck;
-    }
 }
