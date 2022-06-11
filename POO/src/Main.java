@@ -16,7 +16,7 @@ public class Main {
                 break;
             }
             System.out.print("Deseja mais um lanche (S = Sim / N = Não): ");
-            if (scan.nextLine().equalsIgnoreCase("N")){
+            if (scan.nextLine().equalsIgnoreCase("N")) {
                 break;
             }
         }

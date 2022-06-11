@@ -13,6 +13,8 @@ public abstract class Lanche {
             }
         }
     }
+    public abstract void mostrarDetalhesComanda();
+
 
 
     //Getters & Setters
