@@ -10,6 +10,7 @@ public class Aviao implements MeioTransporte {
 
     private ArrayList<AssentoVoo> assentos = new ArrayList<>();
 
+
     @Override
     public boolean verificarOcupacao(String verificar) {
         return false;
