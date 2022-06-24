@@ -11,7 +11,7 @@ public class MiniPizza extends Lanche{
         this.adicionarIngrediente("Massa");
         this.adicionarIngrediente("Massa de tomate");
         this.adicionarIngrediente("Mozzarella");
-        this.setTipo("Mini Pizza");
+        this.setTipo("MINI PIZZA");
     }
 
     public void adicionarSaborEIngredientes(String sabor) {
@@ -67,9 +67,10 @@ public class MiniPizza extends Lanche{
 
     @Override
     public void mostrarDetalhesComanda() {
-        System.out.println("====" + this.getTipo() + " - " + this.getSabor() + "====");
+        System.out.println("=====" + this.getTipo() + " = " + this.getSabor() + "=====");
         if (this.isBordaRecheada()) {
-            System.out.println("-- COM BORDA RECHEADA: " + this.getSaborBorda().toUpperCase() + " --");
+            System.out.println("------COM BORDA RECHEADA \n SABOR:" + this.getSaborBorda().toUpperCase());
+            System.out.println("=======================");
         }
     }
 
@@ -102,11 +103,11 @@ public class MiniPizza extends Lanche{
             default:
                 System.err.println("Escolha um sabor válido");
         }
-        System.out.println("Com borda recheada? (S/N)");
+        System.out.println("Informe se terá borda recheada (S = Sim / N = Não): ");
         String aberto = in.nextLine();
         this.setBordaRecheada(aberto.equalsIgnoreCase("S"));
         if (this.isBordaRecheada()) {
-            System.out.println("Qual o sabor da borda?");
+            System.out.println("Informe o sabor da borda recheada: ");
             this.setSaborBorda(in.nextLine());
         }
     }

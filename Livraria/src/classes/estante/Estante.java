@@ -12,7 +12,6 @@ public class Estante {
     public Estante(int capMaxima) {
         setCapMaxima(capMaxima);
         setItens(new Item[capMaxima]);
-        //TODO
     }
 
     public boolean estanteCheia() {

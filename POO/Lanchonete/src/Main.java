@@ -30,7 +30,7 @@ public class Main {
         System.out.println("(5) Mini Pizza");
         System.out.println("(6) Pizza");
         System.out.println();
-        System.out.print("Digite sua opção: ");
+        System.out.print("Informe sua opção: ");
         int escolha = in.nextInt();  //sempre será utilizado ao ler a escolha
         in.nextLine();
         Lanche lanche = null;

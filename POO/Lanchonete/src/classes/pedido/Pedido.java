@@ -11,14 +11,14 @@ public class Pedido {
     public void imprimirComanda() {
         for (Lanche l : this.getLanches()) {
             l.mostrarDetalhesComanda();
-            System.out.println("-INGREDIENTES-");
+            System.out.println("=INGREDIENTES=");
             for (String ingrediente : l.getIngredientes()) {
                 System.out.println(ingrediente);
             }
             System.out.printf("Valor: R$%.2f\n", l.getValor());
         }
         System.out.printf("Valor total do pedido: R$%.2f\n", this.calcularValorTotal());
-        System.out.println("------------------------------------");
+        System.out.println("=======================");
     }
 
     public double calcularValorTotal() {
