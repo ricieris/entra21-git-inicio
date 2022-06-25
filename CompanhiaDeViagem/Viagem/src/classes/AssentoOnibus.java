@@ -5,7 +5,6 @@ public class AssentoOnibus extends Assento {
     private String lugar;
 
 
-
     // Getters & Setters
 
     public String getLugar() {
