@@ -5,7 +5,6 @@ public class AssentoVoo extends Assento {
     private String classe;
 
 
-
     // Getters & Setters
 
     public String getCodigo() {

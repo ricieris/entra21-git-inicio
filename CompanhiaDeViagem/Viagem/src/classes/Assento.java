@@ -4,12 +4,10 @@ public abstract class Assento {
     private boolean ocupado;
     private double valor;
 
-    public void ocupar () {
+    public void ocupar() {
         this.setOcupado(true);
 
     }
-
-
 
 
     // Getters & Setters
