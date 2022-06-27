@@ -54,16 +54,71 @@ public class Onibus implements MeioTransporte {
     public void mostrarAssentos() {
         for (int i = 0; i < this.assentos.size(); i++) {
             AssentoOnibus a = this.assentos.get(i);
-            a.setLugar(String.valueOf(i));
+            int numero = 0;
+            numero = Integer.parseInt(a.getLugar());
 
-            System.out.print("[" + a + "]");
+            if (a.isOcupado()) {
+                System.out.print("[XX]");
+            } else {
+                if (numero <= 9) {
+                    System.out.print("[0" + a.getLugar() + "]");
+                } else {
+                    System.out.print("[" + a.getLugar() + "]");
+                }
+            }
+            if (numero % 4 == 0) {
+                System.out.println();
+            } else if (numero % 2 == 0) {
+                System.out.print(" || ");
+            }
+
+            /*if (numero <= 9) {
+                if (numero % 2 != 0) {
+                    if (a.isOcupado()) {
+                        System.out.print("[XX]");
+                    } else {
+                        System.out.print("[0" + a.getLugar() + "]");
+                    }
+
+                } else if (numero % 4 != 0) {
+                    if (a.isOcupado()) {
+                        System.out.print("[XX] || ");
+                    } else {
+                        System.out.print("[0" + a.getLugar() + "] || ");
+                    }
+                } else {
+                    if (a.isOcupado()) {
+                        System.out.print("[XX] \n");
+                    } else {
+                        System.out.print("[0" + a.getLugar() + "]\n");
+                    }
+                }
+                ////////////////////////////////
+            } else {
+                if (numero % 4 != 0 && numero % 2 != 0) {
+                    if (a.isOcupado()) {
+                        System.out.print("[XX]");
+                    } else {
+                        System.out.print("[" + a.getLugar() + "]");
+                    }
+
+                } else if (numero % 4 != 0 && numero % 2 == 0) {
+                    if (a.isOcupado()) {
+                        System.out.print("[XX] || ");
+                    } else {
+                        System.out.print("[" + a.getLugar() + "] || ");
+                    }
+
+                } else if (numero % 4 == 0) {
+                    if (a.isOcupado()) {
+                        System.out.print("[XX] \n");
+                    } else {
+                        System.out.print("[" + a.getLugar() + "]\n");
+                    }
+                }
+            }*/
         }
     }
-
-            // (!numero%4 && !numero%2)  print [numero]
-            // (!numero%4 && numero%2)   print [numero] ||
-            // (numero%4)                print [numero] \n
-            // (numero.isOcupado())      print [XX]
 
     @Override
     public Assento getAssento(String assento) {
