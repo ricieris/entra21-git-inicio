@@ -1,9 +1,6 @@
 package classes.estante;
 
 import classes.Item;
-import classes.avaliacao.Avaliacao;
-
-import java.util.Locale;
 
 public class Estante {
     private int capMaxima;
