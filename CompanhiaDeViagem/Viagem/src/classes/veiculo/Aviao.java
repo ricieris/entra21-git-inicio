@@ -2,6 +2,7 @@ package classes.veiculo;
 
 import classes.Assento;
 import classes.AssentoVoo;
+import classes.ClasseAssentoVoo;
 import classes.MeioTransporte;
 
 import java.util.ArrayList;
@@ -9,6 +10,28 @@ import java.util.ArrayList;
 public class Aviao implements MeioTransporte {
 
     private ArrayList<AssentoVoo> assentos = new ArrayList<>();
+
+    public Aviao(int linhasCadeirasLuxo, int linhasCadeirasEconomicas) {
+        String codigoAssentos = "ABCD";
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < linhasCadeirasLuxo; j++) {
+                AssentoVoo a = new AssentoVoo();
+                a.setCodigo(String.valueOf(codigoAssentos.charAt(i)) + j);
+                a.setClasse(ClasseAssentoVoo.LUXO);
+                assentos.add(a);
+            }
+        }
+
+    codigoAssentos = "ABCDEF";
+        for (int i = 0; i < 6; i++) {
+        for (int j = 0; j < linhasCadeirasEconomicas; j++) {
+            AssentoVoo a = new AssentoVoo();
+            a.setCodigo(String.valueOf(codigoAssentos.charAt(i))+j);
+            a.setClasse(ClasseAssentoVoo.ECONOMICA);
+            assentos.add(a);
+        }
+    }
+}
 
 
     @Override
@@ -55,9 +78,9 @@ public class Aviao implements MeioTransporte {
         return null;
     }
 
-    public Assento getAssento(String assento, String classe) {
+    public Assento getAssento(String assento, ClasseAssentoVoo classe) {
         for (AssentoVoo a : this.assentos) {
-            if (a.getCodigo().equalsIgnoreCase(assento) && a.getClasse().equalsIgnoreCase(classe)) {
+            if (a.getCodigo().equalsIgnoreCase(assento) && a.getClasse().equals(classe)) {
                 return a;
             }
         }
