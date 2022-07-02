@@ -57,6 +57,10 @@ public class Livro extends Item{
 
     @Override
     public void mostrarDetalhes() {
+        this.getAutor();
+        this.getQtdePaginas();
+        this.getAnoPublicacao();
+        this.getEdicao();
 
     }
 }

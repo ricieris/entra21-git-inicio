@@ -93,7 +93,7 @@ public class Main {
                     System.out.printf("(%d) %s\n", item.getValorOpcao(), item.getDescricao());
                 }
                 //escolha = EMenuItem.valueOf(in.nextLine());
-                escolha = EMenuItem.getByValorOpcao(in.nextInt());
+                //escolha = EMenuItem.getByValorOpcao(in.nextInt());
                 if (escolha == null) {
                     System.err.println("Selecione uma opção válida");
                 }

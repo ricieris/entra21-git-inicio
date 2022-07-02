@@ -45,6 +45,8 @@ public class DVD extends Item {
 
     @Override
     public void mostrarDetalhes() {
-
+        this.getDiretor();
+        this.getDuracao();
+        this.getAnoLancamento();
     }
 }
