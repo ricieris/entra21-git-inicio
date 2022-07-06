@@ -6,7 +6,7 @@ public class Avaliacao {
     private String feedback;
 
 
-    // Getters & Setters
+    // GETTERS & SETTERS
 
     public double getRating() {
         return rating;

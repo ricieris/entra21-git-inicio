@@ -2,13 +2,14 @@ package classes.itens;
 
 import java.util.Scanner;
 
-public class Livro extends Item{
+public class Livro extends Item {
     private String autor;
     private int qtdePaginas;
     private int anoPublicacao;
     private int edicao;
 
-    // Getters & Setters
+
+    // GETTERS & SETTERS
 
     public String getAutor() {
         return autor;
@@ -57,10 +58,10 @@ public class Livro extends Item{
 
     @Override
     public void mostrarDetalhes() {
-        this.getAutor();
-        this.getQtdePaginas();
-        this.getAnoPublicacao();
-        this.getEdicao();
+        System.out.println("Autor: " + this.getAutor());
+        System.out.println("Qtde páginas: " + this.getQtdePaginas());
+        System.out.println("Ano de publicação: " + this.getAnoPublicacao());
+        System.out.println("Edição: " + this.getEdicao());
 
     }
 }

@@ -25,8 +25,9 @@ public abstract class Item {
     }
 
     public double getTotalRating() {
-        return this.avaliacoes.stream().mapToDouble(Avaliacao::getRating).sum()
+        Double valor = this.avaliacoes.stream().mapToDouble(Avaliacao::getRating).sum()
                 / this.avaliacoes.size();
+        return valor.isNaN() ? 0 : valor;
     }
 
     public abstract void montarDetalhes(Scanner in);
@@ -34,7 +35,7 @@ public abstract class Item {
     public abstract void mostrarDetalhes();
 
 
-    // Getters & Setters
+    // GETTERS & SETTERS
 
     public String getTitulo() {
         return titulo;

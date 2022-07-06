@@ -7,7 +7,8 @@ public class DVD extends Item {
     private double duracao;
     private int anoLancamento;
 
-    // Getters & Setters
+
+    // GETTERS & SETTERS
 
     public String getDiretor() {
         return diretor;
@@ -41,12 +42,13 @@ public class DVD extends Item {
         this.setAnoLancamento(in.nextInt());
         System.out.println("Informe a duração");
         this.setDuracao(in.nextDouble());
+        in.nextLine();
     }
 
     @Override
     public void mostrarDetalhes() {
-        this.getDiretor();
-        this.getDuracao();
-        this.getAnoLancamento();
+        System.out.println("Diretor: " + this.getDiretor());
+        System.out.println("Ano de lançamento: " + this.getAnoLancamento());
+        System.out.println("Duração: " + this.getDuracao());
     }
 }
