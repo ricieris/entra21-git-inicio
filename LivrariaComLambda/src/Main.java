@@ -7,6 +7,9 @@ import classes.itens.DVD;
 import classes.itens.Item;
 import classes.itens.Livro;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import java.util.Scanner;
 
 public class Main {
@@ -136,7 +139,7 @@ public class Main {
                 EMenuItem escolha = (EMenuItem) escolherOpcao(i);
                 switch (escolha) {
                     case VOLTAR -> System.out.println("Retornando...");
-                    case VER_AVALIACOES -> mostarAvaliacoes(i);
+                    case VER_AVALIACOES -> mostrarAvaliacoes(i);
                     case AVALIAR_ITEM -> i.avaliar();
                     case MOSTRAR_DETALHES -> {
                         System.out.println("Título: " + i.getTitulo());
@@ -162,10 +165,11 @@ public class Main {
         return e;
     }
 
-    public static void mostarAvaliacoes(Item i) {
+    public static void mostrarAvaliacoes(Item i) {
         i.getAvaliacoes().forEach(a -> {
             System.out.println("Autor: " + a.getNome());
-            System.out.println("avaliação: " + a.getRating());
+            System.out.println("Data e hora da avaliação: "+ a.getDataAvaliacao().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH'h'mm'm'ss's5.'")));
+            System.out.println("Avaliação: " + a.getRating());
             System.out.println("Comentário: ");
             System.out.println(a.getFeedback());
             System.out.println("--------------------");
