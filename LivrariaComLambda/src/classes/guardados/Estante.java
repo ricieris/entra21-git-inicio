@@ -39,7 +39,7 @@ public class Estante {
     }
 
 
-    // Getters & Setters
+    // GETTERS & SETTERS
 
     public int getCapMaxima() {
         return capMaxima;

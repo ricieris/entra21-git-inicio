@@ -1,15 +1,14 @@
 package classes;
 
-public enum EMenu {
+public enum EMenu implements IMenu {
     SAIR(0, "Sair"),
     ADICIONAR_ITEM(1, "Adicionar item a estante"),
     BUSCAR_ITEM(2, "Buscar item"),
     REMOVER_ITEM(3, "Remover item da estante"),
     MOSTRAR_ITENS(4, "Mostar itens na estante"),
-    ORGANIZAR_ESTANTE(6, "Organizar estante");
-
-    private final int valorOpcao;
-    private final String descricao;
+    ADICIONAR_ESTANTE(5, "Adicionar estante");
+    private int valorOpcao;
+    private String descricao;
 
     EMenu(int valor, String descricao) {
         valorOpcao = valor;
@@ -24,9 +23,6 @@ public enum EMenu {
         }
         return null;
     }
-
-
-    // Getters & Setters
 
     public int getValorOpcao() {
         return this.valorOpcao;
