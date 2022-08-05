@@ -1,0 +1,40 @@
+* { font-family: 'Poppins';
+}
+
+body {
+    background-color:fuchsia;
+}
+
+table {
+    border: 1px solid black;
+    width: 100%;
+    border-spacing: 0;
+}
+
+th {
+    text-align: start;
+    background-color: chartreuse;
+    padding: 0px 4px;
+}
+
+
+/* p {
+    color: blue; 
+    margin-top: 0;
+}
+
+i {
+    color:orangered;
+}
+
+b {
+    color:lavender;
+}
+
+u { color: darkcyan;
+
+} */
+
+
+
+
