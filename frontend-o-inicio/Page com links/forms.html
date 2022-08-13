@@ -8,29 +8,36 @@
         <meta name="description" content="Primeira página">
         <meta name="author" content="Riciéri Santos">
         <meta name="viewport" content="width=device-width, inicial-scale-1.0">
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <link rel="stylesheet" href="css/styles.css">
+
     </head>
 
-    <body>
-        <h3><b>FORMULÁRIO PARA PREENCHER</b></h3>
-            <form>
+    <body class="formtest">
+        <h3 id = "forminicio"><b>FORMULÁRIO PARA PREENCHER</b></h3>
+            <form id="area">
                 <label for="txt">Nome:</label> 
                 <input type="text"> 
                 <br><br>
                 <label for="num">Idade:</label> 
                 <input type="number" step=".1"> 
                 <br><br>
+
                 <label for="col">Cor preferida:</label> 
                 <input type="color"> 
                 <br><br>
+
                 <label for="data">Data de hoje:</label> 
                 <input type="date"> 
                 <br><br>
+
                 <header>Se acha feio(a)?</header>
                 <input type="radio" name="name" id="rd1">
                 <label for="rd1">Sim</label> 
                 <input type="radio" name="name" id="rd2"> 
                 <label for="rd2">Não</label> 
                 <br><br>
+
                 <header>Onde fica o feijão?</header>
                 <input type="checkbox" name="name" id="ch1">
                 <label for="ch1">Feijão vai por cima</label>
@@ -41,11 +48,13 @@
                 <input type="checkbox" name="name" id="ch3">
                 <label for="ch3">Sem feijão</label>
                 <br><br>
+
                 <label for="pass">Senha:</label> 
                 <input type="password"> 
                 <br><br>
-                <input type="submit" value="Enviar">
-                    
+                <div class="enviar">
+                <input classe="enviar" type="submit" value="Enviar">
+                </div>  
             </form>
     </body>
 </html>
