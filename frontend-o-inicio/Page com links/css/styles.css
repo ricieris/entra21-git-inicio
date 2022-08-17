@@ -5,10 +5,69 @@ html, body {
     background-color:rgb(236, 236, 236);
 }
 
+.btn.btn-warning {
+    background-color: yellow;
+    border-radius: 3px;
+}
+.btn.btn-warning:hover {
+    background-color: rgb(226, 226, 0);
+    border-radius: 3px;
+}
+.btn.btn-warning:active {
+    background-color: rgb(255, 255, 80);
+    border-radius: 3px;
+}
+
+.btn.btn-danger {
+    background-color: red;
+    border-radius: 3px;
+}
+.btn.btn-danger:hover {
+    background-color: rgb(224, 0, 0);
+    border-radius: 3px;
+}
+.btn.btn-danger:active {
+    background-color: rgb(255, 57, 57);
+    border-radius: 3px;
+}
+
+.btn {
+    border: 0;
+    background-color: transparent;
+    padding: 5px 16px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.btn.btn-success {
+    background-color: rgb(75, 191, 75);
+    border-radius: 3px;
+}
+
+.btn.btn-success:hover {
+    background-color: rgb(100, 220, 100);
+    border-radius: 3px;
+}
+
+.btn.btn-success:active {
+    background-color: rgb(54, 153, 54);
+    border-radius: 3px;
+}
+
 table.contained {
     margin-left: 15%;
     margin-right: 15%;
     width: 70%;
+}
+
+table.vendinha {
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70%;
+}
+
+tfoot tr.summ td {
+    text-align: right;
 }
 
 .w-50 {
