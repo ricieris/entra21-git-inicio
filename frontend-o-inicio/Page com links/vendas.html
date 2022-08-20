@@ -54,7 +54,7 @@
                 document.getElementById(`lanche-${lanche.id}-nome`).innerHTML = `${lanche.nome}`;
                 document.getElementById(`lanche-${lanche.id}-valor`).innerHTML = `${lanche.valor}`;
                 document.getElementById(`lanche-${lanche.id}-crud`).style = "";
-                document.getElementById(`lanche-${lanche.id}-save`).style = "display: none";
+                document.getElementById(`lanche-${lanche.id}-save`).style = "display: none;";
             }
 
             function onSave(id){
@@ -64,7 +64,7 @@
                 lanche.valor = document.getElementById(`input-lanche-${lanche.id}-valor`).value;
                 document.getElementById(`lanche-${lanche.id}-valor`).innerHTML = `${lanche.valor}`;
                 document.getElementById(`lanche-${lanche.id}-crud`).style = "";
-                document.getElementById(`lanche-${lanche.id}-save`).style = "display: none";
+                document.getElementById(`lanche-${lanche.id}-save`).style = "display: none;";
             }
 
 
@@ -123,4 +123,4 @@
             </table>
         </div>
     </body>
-</html>
+</html> 

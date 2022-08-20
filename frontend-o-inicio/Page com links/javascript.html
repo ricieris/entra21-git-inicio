@@ -16,7 +16,10 @@
     <body>
         <div id="texto"></div>
         <input type="text" name="teste" id="input-txt">
-        <button onclick="submitMsg()">Clique aqui</button>
+        <button onclick="submitMsg()">Não clique aqui</button>
+
+        <div id="async"></div>
+        <button id="async_btn" onclick="asyncMsg()">Clique aqui para uma mensagem</button>
 
         <script type="text/javascript">
             function submitMsg() {
@@ -28,7 +31,7 @@
                 p.textContent = msg;
 
                 document.getElementById("texto").appendChild(p);
-        }
+            }
 document.onreadystatechange = function() {
     if(document.readyState === 'complete') {
         document.getElementById("input-txt")
@@ -39,6 +42,22 @@ document.onreadystatechange = function() {
             });
         }
     }
+
+    function getMsg() {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                resolve("Eu <3 JavaScript");
+            }, 1000);
+        });
+    }
+
+    async function asyncMsg() {
+        document.getElementById("async")
+            .innerHTML = await getMsg();
+        document.getElementById("async_btn").style = 
+            "display: none;";
+    }
+
         </script>
     </body>
 </html>

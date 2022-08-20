@@ -1,0 +1,60 @@
+<!-- <!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>PRIMEIRA PÁGINA HTML DO RICIÉRI</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Primeira página">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="description" content="Primeira página">
+        <meta name="author" content="Riciéri Santos">
+        <meta name="viewport" content="width=device-width">
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <link rel="stylesheet" href="css/styles.css">
+        <script type="text/javascript">
+            function loadImg() {
+                let req = new XMLHttpRequest();
+                req.open("GET", "https://dog.ceo/api/breeds/image/random", false);
+                req.send(null);
+                document.getElementsByTagName("img")[0].src =
+                    JSON.parse(req.responseText).message;
+            }
+        </script>
+
+    </head>
+    <body>
+        <img src/>
+        <button onclick="loadImg()">Veja o cachorrinho</button>
+    </body>
+
+</html>  -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>PRIMEIRA PÁGINA HTML DO RICIÉRI</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Primeira página">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="description" content="Primeira página">
+        <meta name="author" content="Riciéri Santos">
+        <meta name="viewport" content="width=device-width">
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <link rel="stylesheet" href="css/styles.css">
+        <script type="text/javascript">
+            function loadCharList(){
+                let req = new XMLHttpRequest();
+                req.open("GET", "http://hp-api.herokuapp.com/api/characters", false);
+                req.send(null);
+                document.getElementById("charlist").innerHTML =
+                    JSON.parse(req.responseText).map(char => `
+                        <li>${char.name}</li>
+                    `).join("");
+            }
+
+        </script>
+    </head>
+
+    <body onload="loadCharList()">
+        <ul id="charlist"></ul>
+    </body>
+</html>
