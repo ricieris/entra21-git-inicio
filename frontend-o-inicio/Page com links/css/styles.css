@@ -6,10 +6,71 @@ html, body {
     background-image: linear-gradient(to right, white, rgb(228, 228, 228), white);
 }
 
+button.inicioJogo {
+    margin: 10px;
+    margin-top: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border: 0;
+    background-color: rgb(56, 86, 255);
+    color: white;
+    padding: 5px 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0px 12px 20px -15px black;
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+button.inicioJogo:hover {
+    background-color: rgb(74, 101, 252);
+    border-radius: 8px;
+}
+
+button.inicioJogo:active {
+    background-color: rgb(38, 70, 252);
+    border-radius: 8px;
+}
+
+button.botaogato {
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border: 0;
+    background-color: rgb(157, 199, 255);
+    padding: 5px 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0px 12px 20px -15px black;
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+button.botaogato:hover {
+    background-color: rgb(131, 185, 255);
+    border-radius: 8px;
+}
+
+button.botaogato:active {
+    background-color: rgb(60, 145, 255);
+    border-radius: 8px;
+}
+
+img.fotogato {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5;
+    border-radius: 10px;
+    box-shadow: 0px 12px 20px -15px black;
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
 .btn.btn-warning {
     background-color: yellow;
     border-radius: 3px;
 }
+
 .btn.btn-warning:hover {
     background-color: rgb(226, 226, 0);
     border-radius: 3px;
