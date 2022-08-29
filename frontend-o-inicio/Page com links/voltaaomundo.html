@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>PRIMEIRA PÁGINA HTML DO RICIÉRI</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Primeira página">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="description" content="Primeira página">
+        <meta name="author" content="Riciéri Santos">
+        <meta name="viewport" content="width=device-width">
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <link rel="stylesheet" href="css/styles.css">
+        <script type="text/javascript">
+
+            function Mensagem() {
+                var local = alert(`OLÁ JOGADOR!
+Digite no campo abaixo um local (país, cidade, etc.) para onde deseja viajar e descubra se é possível ou não. 
+Existe uma lógica por trás disso e cabe a você descobrir.`);
+                };
+                
+        </script>
+    </head>
+
+    <body>
+        <div>
+            <button class="inicioJogo" onclick="Mensagem()">CLIQUE AQUI</button>
+        </div>
+        <div class="jogo">
+        <input class="palpite" type="text">
+        <input class="confirmar" type="submit" value="Confirmar">
+        </div>
+
+    </body>
+
+    <!-- <script type = "text/javascript">
+
+        var volta = {"v": [] ,"o": [], "l": [],"t": [],"a": []};
+    
+        var contador = 0;
+
+        function Local(){
+            let local = prompt("Digite um local: ");
+            switch(contador){
+            case(0): {
+                if(local.slice(0,1) == "v"){
+                    
+                    volta["v"].push(local);
+                    contador ++;
+                    }
+                }
+            case(1): {
+                if(local.slice(0,1) == "o"){
+                    volta["o"].push(local);
+                    contador++;
+                    }
+                }
+            case(2): {
+                if(local.slice(0,1) == "l"){
+                    volta["l"].push(local);
+                    contador++;}
+                }
+
+            case(3): {
+                if(local.slice(0,1) == "t"){
+                    volta["t"].push(local);
+                    contador++;
+                    }
+                }   
+            case(4): {
+                if(local.slice(0,1) == "a"){
+                    volta["a"].push(local);
+                    contador = 0;
+                }
+            }
+        }
+    }
+        console.log(local);
+         
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+        <button onclick="Local()">Posso ir?</button>
+        </div>
+    </div>
+</body> -->
+</html>
+

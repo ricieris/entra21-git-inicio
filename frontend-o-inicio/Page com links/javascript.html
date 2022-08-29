@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>PRIMEIRA PÁGINA HTML DO RICIÉRI</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Primeira página">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="description" content="Primeira página">
+        <meta name="author" content="Riciéri Santos">
+        <meta name="viewport" content="width=device-width, inicial-scale-1.0">
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <link rel="stylesheet" href="css/styles.css">
+        
+     </head>
+
+    <body>
+        <div id="texto"></div>
+        <input type="text" name="teste" id="input-txt">
+        <button onclick="submitMsg()">Não clique aqui</button>
+
+        <div id="async"></div>
+        <button id="async_btn" onclick="asyncMsg()">Clique aqui para uma mensagem</button>
+
+        <script type="text/javascript">
+            function submitMsg() {
+                let msg = document.getElementById("input-txt").value;
+                // console.log(document.getElementById("texto"));
+                document.getElementById("input-txt").value = "";
+
+                let p = document.createElement("p");
+                p.textContent = msg;
+
+                document.getElementById("texto").appendChild(p);
+            }
+document.onreadystatechange = function() {
+    if(document.readyState === 'complete') {
+        document.getElementById("input-txt")
+            .addEventListener("keydown", function(e) {
+                if(e.key === "Enter" || e.keyValue === 13) {
+                submitMsg(); 
+                }
+            });
+        }
+    }
+
+    function getMsg() {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                resolve("Eu <3 JavaScript");
+            }, 1000);
+        });
+    }
+
+    async function asyncMsg() {
+        document.getElementById("async")
+            .innerHTML = await getMsg();
+        document.getElementById("async_btn").style = 
+            "display: none;";
+    }
+
+        </script>
+    </body>
+</html>

@@ -1,15 +1,135 @@
 * { font-family: 'Poppins';
 }
 
-body {
+html, body {
     background-color:rgb(236, 236, 236);
+    background-image: linear-gradient(to right, white, rgb(228, 228, 228), white);
 }
 
+button.inicioJogo {
+    margin: 10px;
+    margin-top: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border: 0;
+    background-color: rgb(56, 86, 255);
+    color: white;
+    padding: 5px 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0px 12px 20px -15px black;
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+button.inicioJogo:hover {
+    background-color: rgb(74, 101, 252);
+    border-radius: 8px;
+}
+
+button.inicioJogo:active {
+    background-color: rgb(38, 70, 252);
+    border-radius: 8px;
+}
+
+button.botaogato {
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border: 0;
+    background-color: rgb(157, 199, 255);
+    padding: 5px 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0px 12px 20px -15px black;
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+button.botaogato:hover {
+    background-color: rgb(131, 185, 255);
+    border-radius: 8px;
+}
+
+button.botaogato:active {
+    background-color: rgb(60, 145, 255);
+    border-radius: 8px;
+}
+
+img.fotogato {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5;
+    border-radius: 10px;
+    box-shadow: 0px 12px 20px -15px black;
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+.btn.btn-warning {
+    background-color: yellow;
+    border-radius: 3px;
+}
+
+.btn.btn-warning:hover {
+    background-color: rgb(226, 226, 0);
+    border-radius: 3px;
+}
+.btn.btn-warning:active {
+    background-color: rgb(255, 255, 80);
+    border-radius: 3px;
+}
+
+.btn.btn-danger {
+    background-color: red;
+    border-radius: 3px;
+}
+.btn.btn-danger:hover {
+    background-color: rgb(224, 0, 0);
+    border-radius: 3px;
+}
+.btn.btn-danger:active {
+    background-color: rgb(255, 57, 57);
+    border-radius: 3px;
+}
+
+.btn {
+    border: 0;
+    background-color: transparent;
+    padding: 5px 16px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.btn.btn-success {
+    background-color: rgb(75, 191, 75);
+    border-radius: 3px;
+}
+
+.btn.btn-success:hover {
+    background-color: rgb(100, 220, 100);
+    border-radius: 3px;
+}
+
+.btn.btn-success:active {
+    background-color: rgb(54, 153, 54);
+    border-radius: 3px;
+}
 
 table.contained {
     margin-left: 15%;
     margin-right: 15%;
     width: 70%;
+}
+
+table.vendinha {
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70%;
+}
+
+tfoot tr.summ td {
+    text-align: right;
 }
 
 .w-50 {
@@ -49,7 +169,7 @@ table {
 
 th {
     text-align: start;
-    background-color: rgb(170, 170, 204);
+    background-color: rgb(182, 182, 199);
     padding: 8px 4px;
 }
 
@@ -72,8 +192,8 @@ small {
 
 .tituloindex {
     text-align: center;
+       }
 
-}
 
 .botoesindex {
     text-align: center;
@@ -90,7 +210,6 @@ small {
     text-align: center;
     color: white;
     text-decoration: none;
-    background-color: rgb(108, 159, 255);;
     padding: 4px 8px;
     margin: 2px 0;
     border-radius: 10px;
@@ -107,23 +226,55 @@ small {
     text-align: center;
 }
 
-/* p {
-    color: blue; 
-    margin-top: 0;
+.titulotitulo {
+    text-align: center;
 }
 
-i {
-    color:orangered;
+.caixa {
+    text-align: center;
+    margin: 20px;
+    width:200px;
+    height:50px; 
+    background-color: rgb(248, 248, 248);
+    border-radius: 10px;
+    box-shadow: 0px 12px 20px -15px black;
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.6);
 }
 
-b {
-    color:lavender;
+.formtest {
+    margin: 10px;
+    background-color: rgb(219, 219, 219);
+    box-shadow: 0px 12px 20px -15px black;
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    margin: 20px;
+    width:500px;
+    height: 550px;
 }
 
-u { color: darkcyan;
+.enviar {
+    text-align: right;
+}
 
-} */
+#forminicio {
+    margin: 10px;
+}
+#area {
+    margin: 20px;
+}
 
+@media screen and (max-width: 600px) {
+    html, body {
+        background-color: rgb(255, 255, 255);
+    }
 
+    .botoesindex {
+        background-color: blue;
+        padding: 
+        4px 8px;
+        margin: 2px 0;
+    }
 
-
+    .listaindex {
+        display: block;
+    }
+}

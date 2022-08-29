@@ -1,0 +1,97 @@
+<!-- <!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>PRIMEIRA PÁGINA HTML DO RICIÉRI</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Primeira página">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="description" content="Primeira página">
+        <meta name="author" content="Riciéri Santos">
+        <meta name="viewport" content="width=device-width">
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <link rel="stylesheet" href="css/styles.css">
+        <script type="text/javascript">
+            function loadImg() {
+                let req = new XMLHttpRequest();
+                req.open("GET", "https://dog.ceo/api/breeds/image/random", false);
+                req.send(null);
+                document.getElementsByTagName("img")[0].src =
+                    JSON.parse(req.responseText).message;
+            }
+        </script>
+
+    </head>
+    <body>
+        <img src/>
+        <button onclick="loadImg()">Veja o cachorrinho</button>
+    </body>
+
+</html>  -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>PRIMEIRA PÁGINA HTML DO RICIÉRI</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Primeira página">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="description" content="Primeira página">
+        <meta name="author" content="Riciéri Santos">
+        <meta name="viewport" content="width=device-width">
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <link rel="stylesheet" href="css/styles.css">
+        <script type="text/javascript">
+            // HARRY POTTER
+            // function loadCharList(){
+            //     let req = new XMLHttpRequest();
+            //     req.open("GET", "http://hp-api.herokuapp.com/api/characters", false);
+            //     req.send(null);
+            //     document.getElementById("charlist").innerHTML =
+            //         JSON.parse(req.responseText).map(char => `
+            //             <li>${char.name}</li>
+            //         `).join("");
+            // }
+
+            function requestImg(text) {
+                let url = text == null ?
+                "https://cataas.com/cat?json=true" :
+                `https://cataas.com/cat/says/${text}?json=true`;
+
+                let imgContainer = document.getElementById("img-container");
+                            
+                let req = new XMLHttpRequest();
+                req.open("GET", url, true);
+                req.onload = () => {
+                    imgContainer.innerHTML += `
+                     <img src = "https://cataas.com${JSON.parse(req.responseText).url}" style-display : none;"/>`
+                    ;
+                    imgContainer.getElementsByTagName("img")[0].onload = () => {
+                        imgContainer.getElementsByTagName("img")[0].style = "";
+                        imgContainer.getElementsByClassName
+                }
+            }
+
+            function loadImg() {
+                requestImg();
+            }
+
+            function loadImgWithText() {
+                let texto = prompt("Digite o texto a ser inserido na imagem");
+                if (texto != null) {
+                    requestImg();
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+        <img class="fotogato" src/>
+        <button class="botaogato" onclick="loadImg()">Get CAT</button>
+        <button class="botaogato" onclick="loadImgWithText()">Get CAT with text</button>
+
+    </body>
+    // HARRY POTTER
+    // <body onload="loadCharList()">
+    //     <ul id="charlist"></ul>
+    // </body>
+</html>
