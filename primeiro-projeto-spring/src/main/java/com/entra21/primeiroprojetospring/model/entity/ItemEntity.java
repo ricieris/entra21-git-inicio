@@ -1,6 +1,5 @@
 package com.entra21.primeiroprojetospring.model.entity;
 
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import lombok.Data;
@@ -12,16 +11,12 @@ import java.util.Set;
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
 @Table(name = "item")
-//@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY)
-//@JsonSubTypes(
-//        @JsonSubTypes.Type(value = DvdEntity.class, name = "dvd")
-//)
 public abstract class ItemEntity {
 
     @Column(name = "id")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long itemId;
+    private Long id;
 
     @Column(name = "titulo")
     private String titulo;
@@ -43,7 +38,7 @@ public abstract class ItemEntity {
     private Set<AvaliacaoEntity> avaliacoes;
 
     @ManyToMany
-    @JoinTable (
+    @JoinTable(
             name = "genero_item",
             joinColumns = @JoinColumn(name = "id_item"),
             inverseJoinColumns = @JoinColumn(name = "id_genero")

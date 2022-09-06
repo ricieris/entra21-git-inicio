@@ -9,22 +9,15 @@ import java.time.LocalTime;
 @Entity
 @Table(name = "dvd")
 @PrimaryKeyJoinColumn(name = "id_item", referencedColumnName = "id")
+public class DvdEntity extends ItemEntity{
 
-public class DvdEntity extends ItemEntity {
-//    @Column(name = "id")
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    private Long id;
-
-    @Column (name = "diretor")
+    @Column(name = "diretor")
     private String diretor;
 
     @Column(name = "duracao")
     private LocalTime duracao;
 
-    @Column (name = "ano_lancamento")
+    @Column(name = "ano_lancamento")
     private Integer anoLancamento;
 
-    @Column (name = "item_id")
-    private Long itemId;
 }

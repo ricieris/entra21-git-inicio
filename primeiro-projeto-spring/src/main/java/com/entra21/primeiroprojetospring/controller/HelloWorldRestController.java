@@ -10,11 +10,11 @@ public class HelloWorldRestController {
 
     @GetMapping("/")
     public String helloWorld() {
-        return "Hello World";
+        return "Hello world!";
     }
 
     @PostMapping("/")
     public String greet(@RequestBody String user) {
-        return "Hello, " + user;
+        return "Hello, "+user;
     }
 }

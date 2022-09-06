@@ -20,4 +20,5 @@ public class DvdRestController {
     public List<DvdEntity> getAllDvds() {
         return dvdRepository.findAll();
     }
+
 }
