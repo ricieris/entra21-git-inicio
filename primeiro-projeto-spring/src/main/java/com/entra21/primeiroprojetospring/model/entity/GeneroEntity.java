@@ -1,6 +1,5 @@
 package com.entra21.primeiroprojetospring.model.entity;
 
-
 import lombok.Data;
 
 import javax.persistence.*;
