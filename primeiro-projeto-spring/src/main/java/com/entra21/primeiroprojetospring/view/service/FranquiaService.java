@@ -3,7 +3,6 @@ package com.entra21.primeiroprojetospring.view.service;
 import com.entra21.primeiroprojetospring.model.dto.FranquiaDTO;
 import com.entra21.primeiroprojetospring.model.dto.FranquiaPayloadDTO;
 import com.entra21.primeiroprojetospring.model.entity.FranquiaEntity;
-import com.entra21.primeiroprojetospring.view.repository.FranquiaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
