@@ -1,4 +1,4 @@
 # entra21-git-inicio
-o primeirão
+o primeiro
 ---
-só escrevendo algo pq n tem nada mais pra escrever
+a primeira entrada no git
